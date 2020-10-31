@@ -1,0 +1,360 @@
+
+Reetika@Admin MINGW64 ~
+$ git config  --global user.name "Manvi jain"
+
+Reetika@Admin MINGW64 ~
+$ git config --global user.email jainmanvi837@gmail.com
+
+Reetika@Admin MINGW64 ~
+$ cd desktop
+
+Reetika@Admin MINGW64 ~/desktop
+$ mkdir manvi
+
+Reetika@Admin MINGW64 ~/desktop
+$ cd manvi
+
+Reetika@Admin MINGW64 ~/desktop/manvi
+$ git init
+Initialized empty Git repository in C:/Users/Reetika/Desktop/manvi/.git/
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ ls
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ ls -a
+./  ../  .git/
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ cd .git
+
+Reetika@Admin MINGW64 ~/desktop/manvi/.git (GIT_DIR!)
+$ ls
+config  description  HEAD  hooks/  info/  objects/  refs/
+
+Reetika@Admin MINGW64 ~/desktop/manvi/.git (GIT_DIR!)
+$ cd ..
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ touch hello.txt
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hello.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git add hello.txt
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   hello.txt
+
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git commit -m "created hello.txt"
+[master (root-commit) 15d7fa6] created hello.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello.txt
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git log
+commit 15d7fa657de3ef37922b2718bfc8391d4faf5d6f (HEAD -> master)
+Author: Manvi jain <jainmanvi837@gmail.com>
+Date:   Thu Oct 1 15:34:16 2020 +0530
+
+    created hello.txt
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ echo HELLO, ARUSHI > hello.txt
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git add hello.txt
+warning: LF will be replaced by CRLF in hello.txt.
+The file will have its original line endings in your working directory
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git commit -m "modified file"
+[master 18dcc92] modified file
+ 1 file changed, 1 insertion(+)
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ notepad hello.txt
+/usr/bin/notepad: line 10: exec: notepad.exe: not found
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git add hello.txt
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ touch a.txt
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git add a.txt
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   a.txt
+
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git reset HEAD a.txt
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        a.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git commit -m "modified hello.txt"
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        a.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git add a.txt
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git commit -m "added a.txt"
+[master 733b2df] added a.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 a.txt
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git log
+commit 733b2df52059657053675a1826197fa95c303604 (HEAD -> master)
+Author: Manvi jain <jainmanvi837@gmail.com>
+Date:   Thu Oct 1 15:43:42 2020 +0530
+
+    added a.txt
+
+commit 18dcc92344cb64b423732f6c49f4fbbd59a17677
+Author: Manvi jain <jainmanvi837@gmail.com>
+Date:   Thu Oct 1 15:37:36 2020 +0530
+
+    modified file
+
+commit 15d7fa657de3ef37922b2718bfc8391d4faf5d6f
+Author: Manvi jain <jainmanvi837@gmail.com>
+Date:   Thu Oct 1 15:34:16 2020 +0530
+
+    created hello.txt
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git remote add origin https://github.com/Manvij30/KCCITM-EVE.git
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git push origin master
+
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (8/8), 673 bytes | 84.00 KiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Manvij30/KCCITM-EVE.git
+ * [new branch]      master -> master
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ touch index.html
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ notepad index.html
+/usr/bin/notepad: line 10: exec: notepad.exe: not found
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git add index.html
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git commit -m "created index.html"
+[master 398db91] created index.html
+ 1 file changed, 5 insertions(+)
+ create mode 100644 index.html
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 368 bytes | 73.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Manvij30/KCCITM-EVE.git
+   733b2df..398db91  master -> master
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ cd desktop
+bash: cd: desktop: No such file or directory
+
+Reetika@Admin MINGW64 ~/desktop/manvi (master)
+$ cd ..
+
+Reetika@Admin MINGW64 ~/desktop
+$ git clone https://github.com/Manvij30/Hello-DSC.git
+Cloning into 'Hello-DSC'...
+remote: Enumerating objects: 16, done.
+remote: Counting objects: 100% (16/16), done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 16 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (16/16), 4.37 KiB | 3.00 KiB/s, done.
+
+Reetika@Admin MINGW64 ~/desktop
+$ cd Hello-DSC/
+
+Reetika@Admin MINGW64 ~/desktop/Hello-DSC (master)
+$ touch manvi.py
+
+Reetika@Admin MINGW64 ~/desktop/Hello-DSC (master)
+$ touch manvi.html
+
+Reetika@Admin MINGW64 ~/desktop/Hello-DSC (master)
+$ git add manvi.html
+
+Reetika@Admin MINGW64 ~/desktop/Hello-DSC (master)
+$ git commit -m "added manvi.html"
+[master 55e118d] added manvi.html
+ 1 file changed, 5 insertions(+)
+ create mode 100644 manvi.html
+
+Reetika@Admin MINGW64 ~/desktop/Hello-DSC (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 328 bytes | 164.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Manvij30/Hello-DSC.git
+   0f60b12..55e118d  master -> master
+
+Reetika@Admin MINGW64 ~/desktop/Hello-DSC (master)
+$ cd desktop
+bash: cd: desktop: No such file or directory
+
+Reetika@Admin MINGW64 ~/desktop/Hello-DSC (master)
+$ cd ..
+
+Reetika@Admin MINGW64 ~/desktop
+$ git clone https://github.com/Manvij30/First-Commit.git
+Cloning into 'First-Commit'...
+remote: Enumerating objects: 51, done.
+remote: Counting objects: 100% (51/51), done.
+remote: Compressing objects: 100% (47/47), done.
+remote: Total 260 (delta 28), reused 7 (delta 3), pack-reused 209
+Receiving objects: 100% (260/260), 278.71 KiB | 317.00 KiB/s, done.
+Resolving deltas: 100% (116/116), done.
+
+Reetika@Admin MINGW64 ~/desktop
+$ cd first-commit
+
+Reetika@Admin MINGW64 ~/desktop/first-commit (master)
+$ git branch Manvij30-profile
+
+Reetika@Admin MINGW64 ~/desktop/first-commit (master)
+$ git checkout Manvij30-profile
+Switched to branch 'Manvij30-profile'
+
+Reetika@Admin MINGW64 ~/desktop/first-commit (Manvij30-profile)
+$ cd src/profiles
+
+Reetika@Admin MINGW64 ~/desktop/first-commit/src/profiles (Manvij30-profile)
+$ manvi.md
+bash: manvi.md: command not found
+
+Reetika@Admin MINGW64 ~/desktop/first-commit/src/profiles (Manvij30-profile)
+$ touch manvi.md
+
+Reetika@Admin MINGW64 ~/desktop/first-commit/src/profiles (Manvij30-profile)
+$ manvi.md
+bash: manvi.md: command not found
+
+Reetika@Admin MINGW64 ~/desktop/first-commit/src/profiles (Manvij30-profile)
+$ git add manvi.md
+
+Reetika@Admin MINGW64 ~/desktop/first-commit/src/profiles (Manvij30-profile)
+$ git commit -m "created manvi.md"
+[Manvij30-profile 95d0b48] created manvi.md
+ 1 file changed, 4 insertions(+)
+ create mode 100644 src/profiles/manvi.md
+
+Reetika@Admin MINGW64 ~/desktop/first-commit/src/profiles (Manvij30-profile)
+$ git push origin master
+Everything up-to-date
+
+Reetika@Admin MINGW64 ~/desktop/first-commit/src/profiles (Manvij30-profile)
+$ git push origin master
+Everything up-to-date
+
+Reetika@Admin MINGW64 ~/desktop/first-commit/src/profiles (Manvij30-profile)
+$ git push -u origin Manvij30-profile
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 438 bytes | 109.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'Manvij30-profile' on GitHub by visiting:
+remote:      https://github.com/Manvij30/First-Commit/pull/new/Manvij30-profile
+remote:
+To https://github.com/Manvij30/First-Commit.git
+ * [new branch]      Manvij30-profile -> Manvij30-profile
+Branch 'Manvij30-profile' set up to track remote branch 'Manvij30-profile' from 'origin'.
+
+Reetika@Admin MINGW64 ~/desktop/first-commit/src/profiles (Manvij30-profile)
+$
